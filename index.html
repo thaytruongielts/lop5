@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Giảng Tương Tác: Ngữ Pháp Tiếng Anh Lớp 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .lesson-container {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 20px;
+        }
+        .slide-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .slide-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+        .interactive-section textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            resize: vertical;
+            transition: all 0.2s ease;
+        }
+        .interactive-section textarea:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+        .correct-answer-box {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            line-height: 1.5;
+            display: none;
+        }
+        .button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover:enabled {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .submit-button {
+            background-color: #2563eb;
+            color: white;
+        }
+        .lesson-nav-button {
+            background-color: #48bb78;
+            color: white;
+        }
+        .final-message {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .restart-button {
+            background-color: #f6ad55;
+            color: white;
+            margin-top: 1rem;
+        }
+        .restart-button:hover:enabled {
+            background-color: #ed8936;
+        }
+    </style>
+</head>
+<body>
+    <div class="lesson-container">
+        <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-6">Bài Giảng Ngữ Pháp Tiếng Anh Lớp 5</h1>
+
+        <div id="lesson-slides">
+            <div id="slide-0" class="lesson-slide">
+                <h2 class="slide-title">Slide 1: Tổng hợp ngữ pháp lớp 5</h2>
+                <p class="slide-content">Chào các em! Cô là Huyền, và trong video này, chúng ta sẽ tổng hợp ngữ pháp lớp 5. Video này dành cho những bạn học sinh lớp 5 và những bạn chuẩn bị lên lớp 6, giúp các bạn nắm vững kiến thức căn bản để tự tin hơn trong chương trình học sắp tới.</p>
+                <p class="slide-content">Chúng ta sẽ ôn tập ngữ pháp để chuẩn bị cho các kỳ thi giữa kỳ và cuối kỳ. Hãy bắt đầu nhé!</p>
+            </div>
+
+            <div id="slide-1" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 2: Thì Hiện tại đơn (Động từ thường)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc câu khẳng định:</p>
+                    <p>S + V(s/es)</p>
+                    <p class="font-bold text-lg mt-4">Lưu ý:</p>
+                    <p>Động từ thêm s/es khi chủ ngữ là `she, he, it`.</p>
+                    <p>Những động từ kết thúc bằng `o, s, ss, ch, sh, x, z` sẽ thêm `es`.</p>
+                    <p class="mt-2 italic">Ví dụ: I go to school. / She goes to school.</p>
+                </div>
+            </div>
+
+            <div id="slide-2" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 3: Thì Hiện tại đơn (Câu phủ định)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc:</p>
+                    <p>S + don't/doesn't + V-nguyên mẫu</p>
+                    <p class="font-bold text-lg mt-4">Lưu ý:</p>
+                    <p>`don't` (do not) đi với `I, we, you, they`.</p>
+                    <p>`doesn't` (does not) đi với `she, he, it`.</p>
+                    <p class="mt-2 italic">Ví dụ: I don't play football. / She doesn't play the guitar.</p>
+                </div>
+            </div>
+
+            <div id="slide-3" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 4: Thì Hiện tại đơn (Câu nghi vấn)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc:</p>
+                    <p>Do/Does + S + V-nguyên mẫu?</p>
+                    <p class="font-bold text-lg mt-4">Lưu ý:</p>
+                    <p>Đảo `Do/Does` lên đầu câu để hỏi.</p>
+                    <p>Động từ luôn giữ nguyên mẫu.</p>
+                    <p class="mt-2 italic">Ví dụ: Do you often go to the park? / Does she like eating vegetables?</p>
+                </div>
+            </div>
+            
+            <div id="slide-4" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 5: Luyện tập Hiện tại đơn</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Anh ấy thỉnh thoảng đi tới trường bằng xe đạp."</p>
+                    <textarea id="q1-answer" placeholder="Viết câu trả lời của bạn bằng tiếng Anh..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="1">Nộp bài</button>
+                    <div id="q1-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>He sometimes goes to school by bike.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-5" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 6: Thì Hiện tại đơn (Động từ To-be)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc câu khẳng định:</p>
+                    <p>S + am/is/are + Noun/Adjective</p>
+                    <p class="font-bold text-lg mt-4">Lưu ý:</p>
+                    <p>I → `am`</p>
+                    <p>We, You, They → `are`</p>
+                    <p>He, She, It → `is`</p>
+                    <p class="mt-2 italic">Ví dụ: I am happy today. / She is a teacher.</p>
+                </div>
+            </div>
+            
+            <div id="slide-6" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 7: Luyện tập To-be</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Bạn có phải là học sinh mới không?"</p>
+                    <textarea id="q2-answer" placeholder="Viết câu trả lời của bạn bằng tiếng Anh..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="2">Nộp bài</button>
+                    <div id="q2-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Are you a new pupil?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-7" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 8: Thì Quá khứ đơn (Động từ thường)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc câu khẳng định:</p>
+                    <p>S + V-ed / V2</p>
+                    <p class="font-bold text-lg mt-4">Lưu ý:</p>
+                    <p>Động từ có quy tắc thêm `ed`. Động từ bất quy tắc phải học thuộc lòng.</p>
+                    <p class="mt-2 italic">Ví dụ: I played football yesterday. / He went to school last week.</p>
+                </div>
+            </div>
+
+            <div id="slide-8" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 9: Thì Quá khứ đơn (Phủ định & nghi vấn)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc câu phủ định:</p>
+                    <p>S + didn't + V-nguyên mẫu</p>
+                    <p class="font-bold text-lg mt-4">Cấu trúc câu nghi vấn:</p>
+                    <p>Did + S + V-nguyên mẫu?</p>
+                    <p class="mt-2 italic">Ví dụ: I didn't visit my grandparents last week. / Did you wash the dishes last night?</p>
+                </div>
+            </div>
+            
+            <div id="slide-9" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 10: Luyện tập Quá khứ đơn</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Ngày hôm qua, tôi đã không tới thăm ông bà."</p>
+                    <textarea id="q3-answer" placeholder="Viết câu trả lời của bạn bằng tiếng Anh..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="3">Nộp bài</button>
+                    <div id="q3-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>I didn't visit my grandparents yesterday.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-10" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 11: Thì Quá khứ đơn (Động từ To-be)</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Cấu trúc câu khẳng định:</p>
+                    <p>S + was/were + Noun/Adjective</p>
+                    <p class="font-bold text-lg mt-4">Lưu ý:</p>
+                    <p>`was` đi với `I, he, she, it`.</p>
+                    <p>`were` đi với `we, you, they`.</p>
+                    <p class="mt-2 italic">Ví dụ: It was very hot yesterday. / They were late for school.</p>
+                </div>
+            </div>
+            
+            <div id="slide-11" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 12: Luyện tập Quá khứ đơn To-be</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Hôm qua bạn có tức giận không?"</p>
+                    <textarea id="q4-answer" placeholder="Viết câu trả lời của bạn bằng tiếng Anh..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="4">Nộp bài</button>
+                    <div id="q4-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Were you mad yesterday?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-12" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 13: Phân biệt Can và Could</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">**Can:** Diễn tả khả năng ở hiện tại.</p>
+                    <p class="mt-2 italic">Ví dụ: I **can swim**.</p>
+                    <p class="font-bold text-lg mt-4">**Could:** Diễn tả khả năng ở quá khứ hoặc dùng trong câu hỏi lịch sự.</p>
+                    <p class="mt-2 italic">Ví dụ: I **could ride** a bike when I was four years old. / **Could you** tell me the way?</p>
+                </div>
+            </div>
+
+            <div id="slide-13" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 14: Luyện tập Can/Could</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Tôi đã có thể bơi khi tôi 5 tuổi."</p>
+                    <textarea id="q5-answer" placeholder="Viết câu trả lời của bạn bằng tiếng Anh..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="5">Nộp bài</button>
+                    <div id="q5-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>I could swim when I was 5 years old.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-14" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 15: Các từ để hỏi</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">Một số từ để hỏi phổ biến:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-4 text-gray-700">
+                        <li>**Whose**: Của ai (dùng cho vật sở hữu)</li>
+                        <li>**Who**: Ai (hỏi về người)</li>
+                        <li>**How**: Như thế nào</li>
+                        <li>**Where**: Ở đâu</li>
+                        <li>**How far**: Bao xa</li>
+                        <li>**Why**: Tại sao</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="slide-15" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 16: Luyện tập từ để hỏi</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "____ do you go to the zoo with? - I went with my family."</p>
+                    <textarea id="q6-answer" placeholder="Viết câu trả lời của bạn bằng tiếng Anh..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="6">Nộp bài</button>
+                    <div id="q6-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Who did you go to the zoo with?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-16" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 17: Phân biệt Will và Be going to</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-2">**Be going to:** Dùng cho hành động có kế hoạch chắc chắn.</p>
+                    <p class="mt-2 italic">Ví dụ: I am **going to visit** Da Nang City this July.</p>
+                    <p class="font-bold text-lg mt-4">**Will:** Dùng cho hành động không chắc chắn, chưa có kế hoạch cụ thể.</p>
+                    <p class="mt-2 italic">Ví dụ: I **will go** to Hue this summer.</p>
+                </div>
+            </div>
+
+            <div id="slide-17" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 18: Luyện tập Will/Be going to</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Tớ sẽ tới thăm thành phố Đà Nẵng vào ngày 14 tháng 7 này." (Đã có kế hoạch cụ thể)</p>
+                    <textarea id="q7-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="7">Nộp bài</button>
+                    <div id="q7-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>I am going to visit Da Nang City on the 14th of July.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-18" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 19: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Thứ Sáu vừa rồi, họ đã đến trường muộn."</p>
+                    <textarea id="q8-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="8">Nộp bài</button>
+                    <div id="q8-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>They were late for school last Friday.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-19" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 20: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Bạn có thường xuyên đi tới công viên không?"</p>
+                    <textarea id="q9-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="9">Nộp bài</button>
+                    <div id="q9-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Do you often go to the park?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-20" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 21: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Bạn sống ở đâu?"</p>
+                    <textarea id="q10-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="10">Nộp bài</button>
+                    <div id="q10-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Where do you live?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-21" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 22: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Thời tiết ở Hà Nội vào mùa đông như thế nào?"</p>
+                    <textarea id="q11-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="11">Nộp bài</button>
+                    <div id="q11-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>How is the weather in Hanoi in winter?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-22" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 23: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Bạn đã có thể đạp xe khi bạn 4 tuổi chưa?"</p>
+                    <textarea id="q12-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="12">Nộp bài</button>
+                    <div id="q12-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Could you ride a bike when you were four years old?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slide-23" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 24: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Tại sao bạn lại thích mèo con?"</p>
+                    <textarea id="q13-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="13">Nộp bài</button>
+                    <div id="q13-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Why do you like kittens?</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slide-24" class="lesson-slide hidden">
+                <h2 class="slide-title">Slide 25: Luyện tập tổng hợp</h2>
+                <div class="interactive-section">
+                    <p class="font-bold text-lg mb-4">Hoàn thành câu sau: "Những cái bút màu này là của ai vậy?"</p>
+                    <textarea id="q14-answer" placeholder="Viết câu trả lời của bạn..."></textarea>
+                    <button class="submit-button button mt-4" data-quiz-id="14">Nộp bài</button>
+                    <div id="q14-correct-answer" class="correct-answer-box">
+                        <p class="font-bold">Đáp án mẫu:</p>
+                        <p>Whose crayons are these?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="final-screen" class="lesson-slide hidden">
+                <h2 class="slide-title">Hoàn Thành Bài Giảng!</h2>
+                <p class="final-message">🎉 Chúc mừng! Bạn đã hoàn thành bài giảng ngữ pháp tiếng Anh lớp 5.</p>
+                <button id="restart-lesson-button" class="button restart-button w-full mt-8">Học Lại Bài Giảng</button>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-8">
+            <button id="prev-slide-button" class="button lesson-nav-button" disabled>Slide Trước</button>
+            <span id="slide-indicator" class="text-lg font-semibold text-gray-700">Slide 1 / 26</span>
+            <button id="next-slide-button" class="button lesson-nav-button">Slide Tiếp Theo</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.lesson-slide');
+        const prevButton = document.getElementById('prev-slide-button');
+        const nextButton = document.getElementById('next-slide-button');
+        const slideIndicator = document.getElementById('slide-indicator');
+        const restartLessonButton = document.getElementById('restart-lesson-button');
+        const totalLessonSlides = 26;
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.add('hidden');
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                }
+            });
+
+            prevButton.disabled = (index === 0);
+            
+            if (index < totalLessonSlides - 1) {
+                nextButton.classList.remove('hidden');
+                nextButton.disabled = false;
+                slideIndicator.textContent = `Slide ${index + 1} / ${totalLessonSlides - 1}`;
+            } else {
+                nextButton.classList.add('hidden');
+                slideIndicator.textContent = `Hoàn thành!`;
+            }
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentSlideIndex < totalLessonSlides - 1) {
+                currentSlideIndex++;
+                showSlide(currentSlideIndex);
+            }
+        });
+
+        restartLessonButton.addEventListener('click', () => {
+            currentSlideIndex = 0;
+            showSlide(currentSlideIndex);
+            document.querySelectorAll('textarea').forEach(textarea => {
+                textarea.value = '';
+                textarea.disabled = false;
+            });
+            document.querySelectorAll('.submit-button').forEach(button => {
+                button.disabled = false;
+            });
+            document.querySelectorAll('.correct-answer-box').forEach(answerBox => {
+                answerBox.style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('.submit-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const quizId = e.target.dataset.quizId;
+                const answerBox = document.getElementById(`q${quizId}-correct-answer`);
+                answerBox.style.display = 'block';
+                e.target.disabled = true;
+                document.getElementById(`q${quizId}-answer`).disabled = true;
+            });
+        });
+
+        showSlide(currentSlideIndex);
+    </script>
+</body>
+</html>
